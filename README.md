@@ -5,12 +5,20 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### hot-reloads for development static
 ```
-npm run serve
+npm run dev-server
+```
+### Compiles and hot-reloads for development dinamic
+```
+npm run dev-build
 ```
 
-### Compiles and minifies for production
+### for production static
+```
+npm run server
+```
+### Compiles and minifies for production dinamic
 ```
 npm run build
 ```

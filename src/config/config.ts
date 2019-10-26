@@ -22,9 +22,9 @@ export const conf:ConfI = {
     page:pageUrl,
     api:null, //  URL API для конкретной страницы
     common:{
-        baseURL:'//dev.aa-front-admin.ru',
+        baseURL:'//dev.aa-admin-panel.ru',
         apiURL:'//dev.aa-core.ru',
-        loginURL:'/admin/login',
+        loginURL:'/aa/admin/login',
     },
     port:3000
 }

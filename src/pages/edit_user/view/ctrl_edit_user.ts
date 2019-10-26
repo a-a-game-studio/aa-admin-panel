@@ -16,6 +16,13 @@ class Ctrl extends aaFront.BaseCtrl{
         this.querySys.fList('list_group', 'group');
         this.querySys.fStatus('count_user', 'count_user'); // Статус инициализации страницы
         this.querySys.fStatus('is_init', 'is_init'); // Статус инициализации страницы
+        this.querySys.fAction((ok, data) => {
+            if(!ok){
+                if(confirm('Что то пошло не так, перейти к странице авторизации?')){
+                    window.location.href = conf.common.loginURL;
+                }
+            }
+        })
         this.querySys.fSend(conf.api.init, {
             offset:0,
             limit:100
