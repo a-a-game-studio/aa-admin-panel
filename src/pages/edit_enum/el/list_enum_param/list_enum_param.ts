@@ -38,7 +38,7 @@ export default class list_enum_param extends Vue {
      * @param idEnum 
      * @param idEnumParam 
      */
-    fDelEnumParamFromEnum(idEnumParam:number, idEnum:number){
+    fDelEnumParam(idEnumParam:number, idEnum:number){
         ctrl.fDelEnumParam(idEnumParam, idEnum);
     }
 

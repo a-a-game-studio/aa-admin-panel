@@ -146,7 +146,7 @@ class Ctrl extends aaFront.BaseCtrl{
      * Удалить контроллер у группы
      * @param idUser
      */
-    public fDelEnumParamFromEnum(idEnumParam:number, idEnum:number){
+    public fDelEnumParam(idEnumParam:number, idEnum:number){
         this.querySys.fInit();
         this.querySys.fList('list_access_enum', 'access_enum');
         this.querySys.fSend(conf.api.delEnumParamFromEnum, {

@@ -12,22 +12,6 @@
             <template v-for="oneEnumParam in list.enum_param">
                 <div class="row" style="padding-top:10px;padding-botton:10px">
 
-                    <!-- Чекбокс для добавления контроллера группе -->
-                    <div class="col-sm-2">
-                        <button v-if="ixAccessEnumByID[oneEnumParam.id]" 
-                            @click="fDelEnumParamFromEnum(oneEnumParam.id, status.id_enum_selected)"
-                            type="button" class="btn btn-info active"
-                        >
-                            Y
-                        </button>
-                        <button v-else
-                            @click="fAddEnumParamToEnum(oneEnumParam.id, status.id_enum_selected)"
-                            type="button" class="btn btn-outline-info"
-                        >
-                            X
-                        </button>
-                    </div>
-
                     <!-- Контроллеры доступа-->
                     <div class="col-sm-10">
                         <button v-if="oneEnumParam.id == status.id_enum_param_selected" 
@@ -41,6 +25,16 @@
                             type="button" class="btn btn-outline-info btn-block"
                         >
                             {{oneEnumParam.alias}} - {{oneEnumParam.name}}
+                        </button>
+                    </div>
+
+                    <!-- Чекбокс для добавления контроллера группе -->
+                    <div class="col-sm-2">
+                        <button 
+                            @click="fDelEnumParam(oneEnumParam.id, status.id_enum_selected)"
+                            type="button" class="btn btn-info active"
+                        >
+                            X
                         </button>
                     </div>
 
