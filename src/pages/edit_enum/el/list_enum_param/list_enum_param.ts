@@ -25,15 +25,6 @@ export default class list_enum_param extends Vue {
     }
 
     /**
-     * Добавить пользователя в группу
-     * @param idEnum 
-     * @param idEnumParam 
-     */
-    fAddEnumParamToEnum(idEnumParam:number, idEnum:number){
-        ctrl.fAddEnumParamToEnum(idEnumParam, idEnum);
-    }
-
-    /**
      * Удалить пользователя из группу
      * @param idEnum 
      * @param idEnumParam 

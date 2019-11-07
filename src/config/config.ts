@@ -16,6 +16,7 @@ class PageUrl{
     editUser = '/aa/admin/edit-user';
     editCtrlAccess = '/aa/admin/edit-ctrl-access';
     editGroup = '/aa/admin/edit-group';
+    editEnum = '/aa/admin/edit-enum';
 }; const pageUrl = new PageUrl();
 
 export const conf:ConfI = {

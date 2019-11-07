@@ -84,6 +84,17 @@ router.get(conf.page.editGroup, async (req:any, res:any, next:any) => {
     });
 });
 
+/**
+ * Редактирование ENUM
+ */
+router.get(conf.page.editEnum, async (req:any, res:any, next:any) => {
+    let self = await AdminUserController.init(req, res);
+
+    res.render('base/edit_enum.twig', {
+        page:'edit_enum'
+    });
+});
+
 // /**
 //  * Редактирование прав доступа
 //  */
