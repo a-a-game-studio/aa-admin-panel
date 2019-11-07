@@ -16,17 +16,16 @@ export interface PageConfI extends ConfI{
 class APIURL{
     init = '/aa/admin-edit-enum/init'; // Инициализация данных
     
-    selectEnumParam = '/aa/admin-edit-enum/select-enum-param'; // Выбрать контроллер
-    addEnumParam = '/aa/admin-edit-enum/add-enum-param'; // Добавить контроллер
-    saveEnumParam = '/aa/admin-edit-enum/save-enum-param'; // сохранить контроллер
+    selectEnumParam = '/aa/admin-edit-enum/select-enum-param'; // Выбрать enum параметры
+    addEnumParam = '/aa/admin-edit-enum/add-enum-param'; // Добавить enum параметры
+    saveEnumParam = '/aa/admin-edit-enum/save-enum-param'; // сохранить enum параметр
+    delEnumParam = '/aa/admin-edit-enum/del-enum-param'; // Удалить enum параметр
 
-    selectEnum = '/aa/admin-edit-enum/select-enum'; // Выбрать группу
-    addEnum = '/aa/admin-edit-enum/add-enum'; // Добавить группу
-    saveEnum = '/aa/admin-edit-enum/save-enum'; // Сохранить группу
-    delEnum = '/aa/admin-edit-enum/del-enum'; // Удалить группу
+    selectEnum = '/aa/admin-edit-enum/select-enum'; // Выбрать enum
+    addEnum = '/aa/admin-edit-enum/add-enum'; // Добавить enum
+    saveEnum = '/aa/admin-edit-enum/save-enum'; // Сохранить enum
+    delEnum = '/aa/admin-edit-enum/del-enum'; // Удалить enum
 
-    addEnumParamToEnum = '/aa/admin-edit-enum/add-enum-param-to-enum'; // Добавить контроллер  группе
-    delEnumParamFromEnum = '/aa/admin-edit-enum/del-enum-param-from-enum'; // Удалить контроллер у группы
 }; const apiurl = new APIURL();
 
 // ======================

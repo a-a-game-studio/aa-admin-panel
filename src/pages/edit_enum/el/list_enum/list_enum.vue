@@ -5,7 +5,7 @@
 <div>
     <div class="card">
         <div class="card-header">
-            Список групп
+            Список ENUM
         </div>
         <div class="card-body">
             

@@ -5,7 +5,7 @@
 <div v-if="list.enum_param && list.access_enum && status.id_enum_selected">
     <div class="card">
         <div class="card-header">
-            Список контроллеров
+            Список ENUM параметров
         </div>
         <div class="card-body">
             <button @click="fAddEnumParam" type="button" class="btn btn-outline-info btn-block"><i class="fas fa-plus fa-lg"></i></button>

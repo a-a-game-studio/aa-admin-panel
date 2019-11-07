@@ -30,5 +30,11 @@ module.exports = {
 
             chunks: ['chunk-vendors', 'chunk-common', 'edit_group']
         },
+        edit_enum:{ // Редактирование enum параметров
+            entry: 'src/pages/edit_enum/view/init_edit_enum.ts',
+            filename: 'html/edit_group.html',
+
+            chunks: ['chunk-vendors', 'chunk-common', 'edit_enum']
+        },
     }
 }
