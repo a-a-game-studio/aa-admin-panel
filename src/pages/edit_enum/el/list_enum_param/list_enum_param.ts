@@ -8,11 +8,10 @@ import { pageConf as conf } from '../../view/conf_edit_enum';
 export default class list_enum_param extends Vue {
 
     /**
-     * Открыть форму добавления контроллера
+     * Добавить параметр
      */
     fAddEnumParam(){
-        ctrl.vuexSys.fClearStatus('id_enum_param_selected');
-        ctrl.vuexSys.fSetStatus('if_new_enum_param_form', true);
+        ctrl.fAddEnumParam();
     }
 
     /**
@@ -22,15 +21,6 @@ export default class list_enum_param extends Vue {
     fSelectEnumParam(idEnumParam:number){
         ctrl.vuexSys.fSetStatus('if_new_enum_param_form', false);
         ctrl.fSelectEnumParam(idEnumParam);
-    }
-
-    /**
-     * Удалить пользователя из группу
-     * @param idEnum 
-     * @param idEnumParam 
-     */
-    fDelEnumParam(idEnumParam:number, idEnum:number){
-        ctrl.fDelEnumParam(idEnumParam, idEnum);
     }
 
     get status(){ return ctrl.status; }

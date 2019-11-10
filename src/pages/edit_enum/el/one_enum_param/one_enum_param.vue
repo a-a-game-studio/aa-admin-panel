@@ -19,34 +19,35 @@
                 </div>
                 <div class="form-enum">
                     <span>Значение:</span>
-                    <input @change="fChangeName" type="number" class="form-control" :value="one.enum_param.val" placeholder="Введите значение">
+                    <input @change="fChangeVal" type="number" class="form-control" :value="one.enum_param.val" placeholder="Введите значение">
                 </div>
                 <div class="form-enum">
                     <span>Тип:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum_param.type" placeholder="Введите тип">
+                    <input @change="fChangeType" type="text" class="form-control" :value="one.enum_param.type" placeholder="Введите тип">
                 </div>
                 <div class="form-enum">
                     <span>Описание:</span>
                     <textarea @change="fChangeDescript" 
-                        type="text" class="form-control" 
+                        type="text" class="form-control"
                         :value="one.enum_param.descript" 
                         placeholder="Введите описание"
                     ></textarea>
                 </div>
                 <div class="form-enum">
                     <span>Арг. 1:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum_param.arg1" placeholder="Введите аргумент 1">
+                    <input @change="fChangeArg1" type="text" class="form-control" :value="one.enum_param.arg1" placeholder="Введите аргумент 1">
                 </div>
                 <div class="form-enum">
                     <span>Арг. 2:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum_param.arg2" placeholder="Введите аргумент 2">
+                    <input @change="fChangeArg2" type="text" class="form-control" :value="one.enum_param.arg2" placeholder="Введите аргумент 2">
                 </div>
                 <div class="form-enum">
                     <span>Арг. 3:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum_param.arg3" placeholder="Введите аргумент 3">
+                    <input @change="fChangeArg3" type="text" class="form-control" :value="one.enum_param.arg3" placeholder="Введите аргумент 3">
                 </div>
                 <br/>
                 <button @click="fSaveEnumParam()" type="button" class="btn btn-primary">Сохранить</button>
+                <button @click="fDelEnumParam(one.enum_param.id)" type="button" class="btn btn-danger float-right">Удалить</button>
             </form>
         </div>
     </div>

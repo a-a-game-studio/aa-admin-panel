@@ -31,6 +31,7 @@ class Ctrl extends aaFront.BaseCtrl{
     public fSelectEnum(idEnum:number){
 
         this.vuexSys.fSetStatus('id_enum_selected', idEnum);
+        this.vuexSys.fClearStatus('id_enum_param_selected');
 
         this.querySys.fInit();
         this.querySys.fOne('one_enum', 'enum');
@@ -60,6 +61,9 @@ class Ctrl extends aaFront.BaseCtrl{
      * @param data 
      */
     public fAddEnum(){
+        this.vuexSys.fClearStatus('id_enum_selected');
+        this.vuexSys.fClearStatus('id_enum_param_selected');
+
         this.querySys.fInit();
         this.querySys.fOne('one_enum', 'enum');
         this.querySys.fList('list_enum', 'enum');
@@ -70,14 +74,15 @@ class Ctrl extends aaFront.BaseCtrl{
      * Добавить ENUM параметр
      * @param data 
      */
-    public fAddEnumParam(data:{
-        id_enum:number;
-    }){
-        // this.vuexSys.fClearList('enum');
+    public fAddEnumParam(){
+        this.vuexSys.fClearStatus('id_enum_param_selected');
+
         this.querySys.fInit();
         this.querySys.fOne('one_enum_param', 'enum_param');
         this.querySys.fList('list_enum_param', 'enum_param');
-        this.querySys.fSend(conf.api.addEnumParam, data);
+        this.querySys.fSend(conf.api.addEnumParam, {
+            id_enum:this.one.enum.id
+        });
     };
     
 
@@ -89,7 +94,10 @@ class Ctrl extends aaFront.BaseCtrl{
         this.querySys.fInit();
         this.querySys.fOne('one_enum', 'enum');
         this.querySys.fList('list_enum', 'enum');
-        this.querySys.fSend(conf.api.saveEnum, this.one.enum);
+
+        let sendData:any = this.one.enum;
+        sendData.id_enum = this.one.enum.id;
+        this.querySys.fSend(conf.api.saveEnum, sendData);
     };
 
     
@@ -101,14 +109,20 @@ class Ctrl extends aaFront.BaseCtrl{
         this.querySys.fInit();
         this.querySys.fOne('one_enum_param', 'enum_param');
         this.querySys.fList('list_enum_param', 'enum_param');
+
+        let sendData:any = this.one.enum_param;
+        sendData.id_enum_param = this.one.enum_param.id;
         this.querySys.fSend(conf.api.saveEnumParam, this.one.enum_param);
     };
 
     /**
-     * Удалить группу
+     * Удалить enum
      * @param idEnum
      */
     public fDelEnum(idEnum:number){
+        this.vuexSys.fClearStatus('id_enum_selected');
+        this.vuexSys.fClearStatus('id_enum_param_selected');
+
         this.querySys.fInit();
         this.querySys.fList('list_enum', 'enum');
         this.querySys.fSend(conf.api.delEnum, {
@@ -118,17 +132,21 @@ class Ctrl extends aaFront.BaseCtrl{
         this.vuexSys.fClearOne('enum');
         this.vuexSys.fClearOne('enum_param');
         this.vuexSys.fClearList('enum');
+        this.vuexSys.fClearList('enum_param');
     };
 
     /**
-     * Удалить контроллер у группы
+     * Удалить enum параметр
      * @param idUser
      */
-    public fDelEnumParam(idEnumParam:number, idEnum:number){
+    public fDelEnumParam(idEnumParam:number){
+        this.vuexSys.fClearStatus('id_enum_param_selected');
+
         this.querySys.fInit();
         this.querySys.fList('list_enum_param', 'enum_param');
         this.querySys.fSend(conf.api.delEnumParam, {
-            id_enum_param:idEnumParam,
+            id_enum_param:idEnumParam, // ID удаляемого enum параметра
+            id_enum:this.one.enum.id // Чтобы получить список измененных enum параметров
         });
     };
         

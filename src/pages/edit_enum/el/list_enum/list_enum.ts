@@ -7,11 +7,11 @@ import { pageConf as conf } from '../../view/conf_edit_enum';
 @Component
 export default class list_enum extends Vue {
 
-    
+    /** Добавить enum */
     fAddEnum(){
-        ctrl.vuexSys.fClearStatus('id_enum_selected');
-        ctrl.vuexSys.fSetStatus('if_new_enum_form', true);
+        ctrl.fAddEnum();
     }
+    
     /**
      * Выбрать группу
      * @param idEnum

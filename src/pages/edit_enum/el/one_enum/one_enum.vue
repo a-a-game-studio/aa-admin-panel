@@ -29,18 +29,23 @@
                 </div>
                 <div class="form-enum">
                     <span>Путь 1:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum.path1" placeholder="Введите путь 1">
+                    <input @change="fChangePath1" type="text" class="form-control" :value="one.enum.path1" placeholder="Введите путь 1">
                 </div>
                 <div class="form-enum">
                     <span>Путь 2:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum.path2" placeholder="Введите путь 2">
+                    <input @change="fChangePath2" type="text" class="form-control" :value="one.enum.path2" placeholder="Введите путь 2">
                 </div>
                 <div class="form-enum">
                     <span>Путь 3:</span>
-                    <input @change="fChangeName" type="text" class="form-control" :value="one.enum.path3" placeholder="Введите путь 3">
+                    <input @change="fChangePath3" type="text" class="form-control" :value="one.enum.path3" placeholder="Введите путь 3">
                 </div>
                 <br/>
+                
+                    
                 <button @click="fSaveEnum()" type="button" class="btn btn-primary">Сохранить</button>
+                <button @click="fDelEnum(one.enum.id)" type="button" class="btn btn-danger float-right">Удалить</button>
+                
+                
             </form>
         </div>
     </div>
