@@ -3,6 +3,7 @@
 
 <template>
 <div id="app">
+    <aa-header v-if="status.is_login"></aa-header>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">{{status.user_id}} {{status.token}}</div>

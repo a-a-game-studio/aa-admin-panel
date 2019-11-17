@@ -10,6 +10,9 @@
       <li>
         <a class="nav-link" href="/aa/admin/edit-group">Группы</a>
       </li>
+      <li>
+        <a class="nav-link" href="/aa/admin/edit-enum">ENUM</a>
+      </li>
     </ul>
   </nav>
 </template>

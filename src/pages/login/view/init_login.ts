@@ -2,6 +2,10 @@
 import Vue from 'vue';
 import app from './page_login.vue'
 
+// Подключаем общие компоненты
+import * as common from '../../../common/el'
+Vue.component('aa-header', common.aa_header);
+
 // Подключаем модули страницы
 import frm_login from '../el/frm_login/frm_login.vue'
 Vue.component('frm-login', frm_login);
