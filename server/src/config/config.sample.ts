@@ -1,7 +1,6 @@
 
-import * as aaFront from '@a-a-game-studio/aa-front'
 
-export interface ConfI extends aaFront.ConfI{
+export interface ConfI {
     page:PageUrl; // URL страниц
     api:any; // URL api
     port:number; // Порт сервера
@@ -22,10 +21,5 @@ class PageUrl{
 export const conf:ConfI = {
     page:pageUrl,
     api:null, //  URL API для конкретной страницы
-    common:{
-        baseURL:'//dev.aa-admin-panel.ru',
-        apiURL:'//dev.aa-core.ru',
-        loginURL:'/aa/admin/login',
-    },
-    port:3000
+    port:3002
 }
