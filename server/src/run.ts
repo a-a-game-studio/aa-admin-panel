@@ -38,5 +38,5 @@ app.use(route.router);
 
 // Обработчик ошибок
 
-console.log(`server start at ${conf.common.baseURL}:${conf.port}`);
+console.log(`server start at :${conf.port}`);
 app.listen(conf.port);
