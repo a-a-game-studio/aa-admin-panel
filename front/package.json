@@ -4,10 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build --dest 'build'",
-    "server": "./node_modules/.bin/ts-node ./src/run.ts",
     "dev-build": "vue-cli-service build --watch --mode development --dest 'dev_build'",
-    "dev-server": "./node_modules/.bin/nodemon -e ts -w ./src -x npm run server",
-    "test": "./node_modules/.bin/ts-mocha"
   },
   "dependencies": {
     "@a-a-game-studio/aa-front": "0.0.26",
