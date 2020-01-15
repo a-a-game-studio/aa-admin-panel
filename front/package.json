@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build --dest 'build'",
-    "dev-build": "vue-cli-service build --watch --mode development --dest 'build'"
+    "build": "vue-cli-service build --dest 'build/aa'",
+    "dev-build": "vue-cli-service build --watch --mode development --dest 'build/aa'"
   },
   "dependencies": {
     "@a-a-game-studio/aa-front": "0.0.26",
