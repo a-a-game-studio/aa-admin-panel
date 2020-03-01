@@ -5,8 +5,7 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "server": "./node_modules/.bin/node ./build/run.js",
-    "dev-server": "./node_modules/.bin/ts-node ./src/run.ts",
-    "watch": "./node_modules/.bin/nodemon -e ts -w ./src -x npm run dev-server",
+    "watch": "tsc-watch --outDir ./build --onSuccess \"npm run server\"",
     "test": "./node_modules/.bin/ts-mocha"
   },
   "dependencies": {
@@ -15,8 +14,9 @@
     "@types/node": "^12.12.8",
     "axios": "^0.19.0",
     "cors": "^2.8.5",
-    "twig": "^1.13.3",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "tsc-watch": "^4.2.3",
+    "twig": "^1.13.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
